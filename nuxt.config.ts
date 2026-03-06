@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     'nuxt-auth-utils',
     '@pinia/nuxt',
-    '@pinia/colada-nuxt'
+    '@pinia/colada-nuxt',
+    '@nuxtjs/i18n'
   ],
-  ssr: false,
   devtools: {
     enabled: true
   },
@@ -25,5 +25,12 @@ export default defineNuxtConfig({
         commaDangle: 'never'
       }
     }
-  }
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'ja', name: 'Japanese', file: 'ja.json' }
+    ]
+  },
 })

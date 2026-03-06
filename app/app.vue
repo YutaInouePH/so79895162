@@ -3,6 +3,7 @@ import type { DropdownMenuItem } from '#ui/types'
 
 const { loggedIn, user, clear } = useUserSession()
 const colorMode = useColorMode()
+const switchLocalePath = useSwitchLocalePath()
 
 watch(loggedIn, () => {
   if (!loggedIn.value) {
@@ -45,7 +46,7 @@ const items = [
 <template>
   <UApp>
     <UContainer class="min-h-screen flex flex-col my-4">
-      <div class="mb-2 text-right">
+      <div class="mb-2 text-right space-x-2">
         <UButton
           square
           variant="ghost"
@@ -57,6 +58,8 @@ const items = [
           "
           @click="isDarkMode = !isDarkMode"
         />
+        <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
+        <NuxtLink :to="switchLocalePath('ja')">Japanese</NuxtLink>
       </div>
 
       <UCard variant="subtle">

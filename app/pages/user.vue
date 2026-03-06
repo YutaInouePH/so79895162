@@ -8,6 +8,6 @@ const { user } = useUserSession()
 
 <template>
   <div>
-    <p>Hello {{ user.login }}!</p>
+    <p>{{ $t('greeting', { name: user.login }) }}</p>
   </div>
 </template>

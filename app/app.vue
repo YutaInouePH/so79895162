@@ -79,20 +79,6 @@ const items = [
             v-else
             class="flex flex-wrap -mx-2 sm:mx-0"
           >
-            <UButton
-              to="/todos"
-              icon="i-lucide-list"
-              label="Todos"
-              :color="$route.path === '/todos' ? 'primary' : 'neutral'"
-              variant="ghost"
-            />
-            <UButton
-              to="/optimistic-todos"
-              icon="i-lucide-sparkles"
-              label="Optimistic Todos"
-              :color="$route.path === '/optimistic-todos' ? 'primary' : 'neutral'"
-              variant="ghost"
-            />
             <UDropdownMenu
               v-if="user"
               :items="items"
